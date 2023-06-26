@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -44,4 +45,5 @@ dependencies {
     implementation "com.airbnb.android:lottie:6.0.0"
     implementation platform('com.google.firebase:firebase-bom:32.1.1')
     implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
 }
