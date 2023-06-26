@@ -3,7 +3,7 @@
     <string name="Onboarding_title">EdArchives</string>
     <string name="Onboarding_desc">Study any topic under the Sun from the best sources on the Internet💫</string>
     <string name="LoginTitle">Login to Get More!!</string>
-    <string name = "LoginDesc">Login or Create an account to contribute to our great community!
+    <string name="LoginDesc">Login or Create an account to contribute to our great community!
         Or skip login if you want to get started quicker</string>
     <string name="default_web_client_id" translatable="false">777586785559-sm0mc7sclju4g6ns5qe4f4cd3km248sv.apps.googleusercontent.com</string>
 </resources>

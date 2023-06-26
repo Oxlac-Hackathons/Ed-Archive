@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/resourceThumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/resourceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a resource Title"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"/>
+
+            <TextView
+                android:id="@+id/resourceDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a resource description"
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/resourceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video"/>
+
+        </LinearLayout>
+
+
+</LinearLayout>
