@@ -6,4 +6,11 @@
     </style>
 
     <style name="Theme.EdArchives" parent="Base.Theme.EdArchives" />
+
+    <style name="Theme.EdArchives.Onboarding" parent="Base.Theme.EdArchives">
+        <item name="android:statusBarColor">@color/white</item>
+
+
+
+    </style>
 </resources>

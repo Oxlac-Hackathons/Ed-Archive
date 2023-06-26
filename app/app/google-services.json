@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "777586785559",
+    "project_id": "edarchives-1000",
+    "storage_bucket": "edarchives-1000.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777586785559:android:567e897587b98685ed4b52",
+        "android_client_info": {
+          "package_name": "com.oxlac.edarchives"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777586785559-a11tf13pf3lh7ale4v991mhkdmluacju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oxlac.edarchives",
+            "certificate_hash": "becfab261b4203f96fa0b04a4f5b3ffa0b905af0"
+          }
+        },
+        {
+          "client_id": "777586785559-sm0mc7sclju4g6ns5qe4f4cd3km248sv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaNJ-Ve41_-MwWqRn1jVbm0OVa6sT8mTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777586785559-2ioqghc2mgic75105tfv5e9p39tjhvug.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
