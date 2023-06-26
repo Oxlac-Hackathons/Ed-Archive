@@ -21,7 +21,7 @@ class Archive(models.Model):
     """
 
     name = models.CharField(max_length=100, null=True)
-    description = models.CharField(max_length=100, null=True)
+    description = models.TextField(null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -45,7 +45,7 @@ class Resource(models.Model):
         ("advanced", "Advanced"),
     )
     name = models.CharField(max_length=100, null=True)
-    description = models.CharField(max_length=100, null=True)
+    description = models.TextField(null=True)
     archive = models.ForeignKey(Archive, on_delete=models.CASCADE)
     link = models.URLField(null=True)
     resource_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
