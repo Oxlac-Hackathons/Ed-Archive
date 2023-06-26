@@ -8,24 +8,38 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/titleTextView"
+        android:id="@+id/AppName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        android:text="Welcome!"
-        android:textSize="30sp"
+        android:text="EdArchives"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Welcome Guhan!"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/searchBar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/AppName" />
 
     <EditText
         android:id="@+id/searchBar"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/search_background"
         android:hint="Search"
@@ -34,6 +48,7 @@
         android:paddingEnd="16dp"
         android:textColor="#000000"
         android:textSize="16sp"
+        android:fontFamily="@font/poppins_regular"
         android:textStyle="normal"
         app:layout_constraintEnd_toStartOf="@id/settingsImageView"
         app:layout_constraintHorizontal_bias="1.0"
@@ -59,131 +74,287 @@
         android:layout_marginTop="59dp"
         android:layout_marginBottom="32dp"
         android:text="Recent Archives"
-        android:textSize="27sp"
+        android:fontFamily="@font/poppins_medium"
+        android:textSize="22sp"
         android:textStyle="normal"
         app:layout_constraintBottom_toTopOf="@id/scrollView"
         app:layout_constraintStart_toStartOf="@id/searchBar"
         app:layout_constraintTop_toTopOf="@id/searchBar" />
 
-    <ScrollView
+    <HorizontalScrollView
         android:id="@+id/scrollView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RecentTextView">
+        app:layout_constraintTop_toBottomOf="@+id/RecentTextView"
+        android:scrollbarSize="0dp">
 
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <!-- Add as many items as you want using a loop or dynamically -->
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 1" />
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 2" />
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 3" />
-
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 4" />
-
-                <!-- More text views for additional items -->
-
-            </LinearLayout>
-        </HorizontalScrollView>
-    </ScrollView>
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView">
-        <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <!-- Add as many items as you want using a loop or dynamically -->
-            <GridLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:rowCount="2"
-                android:padding="8dp">
+            <RelativeLayout
+                android:id="@+id/card1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:elevation="2dp">
 
-                <!-- Item 1 -->
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 1"
-                    android:padding="8dp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card1Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="This is a test title"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />>
 
-                <!-- Item 2 -->
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 2"
-                    android:padding="8dp"/>
+            </RelativeLayout>
 
-                <!-- Item 3 -->
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 3"
-                    android:padding="8dp"/>
+            <RelativeLayout
+                android:id="@+id/card2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:elevation="2dp">
 
-                <!-- Item 4 -->
-                <TextView
-                    android:layout_width="120dp"
-                    android:layout_height="120dp"
-                    android:minWidth="120dp"
-                    android:minHeight="120dp"
-                    android:text="Arch 4"
-                    android:padding="8dp"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card2Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="This is a test title"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />>
 
-            </GridLayout>
+            </RelativeLayout>
 
-            <!-- More GridLayouts for additional rows of items -->
+            <RelativeLayout
+                android:id="@+id/card3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:elevation="2dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card3Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="This is a test title"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/card4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/card_background"
+                android:elevation="2dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/card4Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:text="This is a test title"
+                    android:textColor="?attr/colorSecondary"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="18sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform" />>
+
+            </RelativeLayout>
 
         </LinearLayout>
-        </HorizontalScrollView>
-    </ScrollView>
+
+    </HorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Archives:"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_regular"
+            android:text="View All"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RelativeLayout
+            android:id="@+id/all1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/all1Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="This is a test title"
+                android:textColor="?attr/colorSecondary"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/all2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/all2Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="This is a test title"
+                android:textColor="?attr/colorSecondary"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/all3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/all3Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="This is a test title"
+                android:textColor="?attr/colorSecondary"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/all4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+
+            android:layout_weight="1"
+            android:background="@drawable/card_background"
+            android:elevation="2dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/all4Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/poppins_medium"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:text="This is a test title"
+                android:textColor="?attr/colorSecondary"
+                android:textStyle="bold"
+                app:autoSizeMaxTextSize="18sp"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeStepGranularity="2sp"
+                app:autoSizeTextType="uniform" />>
+
+        </RelativeLayout>
+
+
+
+    </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

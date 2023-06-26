@@ -50,7 +50,7 @@ class CustomAdapter(private val dataSet: JSONArray, private val context: Context
         // set the description
         viewHolder.resourceDescription.text = resource.getString("description")
         // set the type
-        viewHolder.resourceType.text = resource.getString("type")
+        viewHolder.resourceType.text = resource.getString("resource_type")
         // set the thumbnail
         Glide.with(context).load(resource.getString("link")).into(viewHolder.resourceThumbnail)
         // Bind the on clikc of the card view
